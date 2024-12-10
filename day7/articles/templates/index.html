@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my document</title>
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+    <style>
+        #navbar{
+            background-color: black;
+            height:8vh;
+        
+        }
+        #sub-nav{
+            width:90%;
+            margin: auto;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+        
+        }
+        ul li{
+        list-style-type: none;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap:50px;
+        }
+        #main1{
+            width:99%;
+            margin: auto;
+            height:92vh;
+            background-color: aqua;
+            border: 2px solid aquamarine;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+        }
+        
+        .art1{
+            
+            background-color: #dadfa4;
+            height:30vh;
+            width:60vw;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 10px;
+        }
+        .art1 p,.art1 h3{
+            margin-left: 25px;
+        }
+        
+        /* .link1{
+            text-decoration: none;
+            color:red;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        } */
+        #link2{
+            text-decoration: none;
+            color:red;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div id="sub-nav">
+            <ul>
+                <li>My Blogs</li>
+                <li>Home</li>
+                <li>About</li>
+            </ul>
+            <ul>
+                <li><input type="text" placeholder="search"></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main1">
+        <h1 align="center">Today's Articles</h1>
+        {% for i in data1 %}             
+        <div class="art1">
+           <a href="{% url 'navigate' i.id %}" style="text-decoration: none;color:red;font-size: 18px;font-family: Arial, Helvetica, sans-serif;font-weight: 700;margin-left:10px">{{i.h3}}</a>
+            <p>{{i.p}}</p>
+            
+        </div>
+        <br>
+            {% endfor %}
+
+        
+    </main>
+   
+</body>
+</html>
