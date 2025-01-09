@@ -21,10 +21,10 @@ This is a Django-based web project that displays articles with a search feature.
 
 ## Snapshots
 ### Homepage
-![Homepage](static/images/Screenshot 2025-01-09 130310.png)
+(day7/static/images/Screenshot 2025-01-09 130310.png)
 
 ### Navigation Page
-![Navigation Page](static/images/Screenshot 2025-01-09 130349.png)
+(day7/static/images/Screenshot 2025-01-09 130349.png)
 
 ## Code Example
 ```python
