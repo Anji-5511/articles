@@ -86,10 +86,10 @@ Once the server is running, open your browser and go to `http://127.0.0.1:8000/`
 
 ## Snapshots
 ### Homepage
-![Homepage](static/imgaes/home.png)
+![Homepage](imgaes/home.png)
 
 ### Navigation Page
-![Navigation Page](imgaes/navigation.png)
+![Navigation Page](imgaes/navigate.png)
 
 ## Code Example
 ```python
